@@ -17,3 +17,15 @@ const BotPage = () => {
 }
 
 export default BotPage
+
+
+
+/**
+ * This page is being used to view a list of bots
+ * 
+ * it uses filter to filter the bots by type
+ * 
+ * The filtered list of bots is displayed using the 'BotsList' component
+ * 
+ * botTypeFilter is used to store the current filter type, and this state is passsed down to the BotsList compntent to display the filtered bots
+ */

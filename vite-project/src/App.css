@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 } */
+
+.App {
+  background: linear-gradient(45deg, #250942, #eca5cd);
+  padding: 10px 20.8px;
+  transition: background 0.5s ease, transform 0.4s ease-in-out;
+}

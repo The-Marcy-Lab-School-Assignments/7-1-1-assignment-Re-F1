@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 const BotClassIcon = (bot_class) => {
   switch (bot_class) {
     case "Assault":
@@ -16,14 +17,19 @@ const BotClassIcon = (bot_class) => {
 // navigate the user to /robots/:id where :id is the id of the current bot
 // - Do NOT use a <Link> component to accomplish this. Use the `useNavigate` hook instead.
 
+// UseNavigate helps us to link, redirect us
 const BotCard = ({ bot }) => {
 
-  const handleClick = () => {
-    console.log(`take me to robot ${robot.id}`);
-  }
+  // const handleClick = () => {
+  //   console.log(`take me to robot ${robot.id}`);
+  // }
 
+  const navigate = useNavigate();
+
+  // update this to use the react router to navigate through the page and be redirected while also being able to see what kind of values we are getting
   return (
-    <div className="ui card" onClick={handleClick}>
+    // check for the id and direct you to the right bot ID and navigate to the right ID page
+    <div className="ui card" onClick={( ) => navigate(`/robots/${bot.id}`)}> 
       <div className="image">
         <img alt={bot.name} src={bot.avatar_url} />
       </div>
